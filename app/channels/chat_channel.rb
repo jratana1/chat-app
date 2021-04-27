@@ -10,4 +10,11 @@ class ChatChannel < ApplicationCable::Channel
         content: opts.fetch('content')
       )
     end
+
+    def draw()
+
+    end
+
+    def 
+    end
   end
