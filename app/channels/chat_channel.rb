@@ -18,7 +18,7 @@ class ChatChannel < ApplicationCable::Channel
 
     def answer(opts)
       Answer.create(
-        answer: opts.fetch('content')
+        answer: opts.fetch('answer')
       )
       # ActionCable.server.broadcast('chat_channel', { answer: opts.fetch("answer"), action: "answer" })
 
