@@ -24,4 +24,8 @@ class ChatChannel < ApplicationCable::Channel
 
     end
 
+    def clear(opts)
+      ActionCable.server.broadcast('chat_channel', { action: "clear" })
+    end
+
   end
