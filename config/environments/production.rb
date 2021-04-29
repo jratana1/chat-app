@@ -33,12 +33,12 @@ Rails.application.configure do
 
   # Mount Action Cable outside main process or domain.
   config.action_cable.mount_path = nil
-  # config.action_cable.url = 'wss://chat-n-draw.herokuapp.com/cable'
-  # config.action_cable.allowed_request_origins = [ 'https://chat-n-draw.herokuapp.com/', /https:\/\/chat-n-draw.herokuapp.*/ ]
+  config.action_cable.url = 'wss://chat-n-draw.herokuapp.com/cable'
+  config.action_cable.allowed_request_origins = [ 'https://chat-n-draw.herokuapp.com/', /https:\/\/chat-n-draw.herokuapp.*/ ]
   # config.action_cable.allow_same_origin_as_host = true
   # config.action_cable.allowed_request_origins = [ '*' ]
-  config.web_socket_server_url = "wss://action-cable-example.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = ['https://chat-n-draw.herokuapp.com/', 'http://chat-n-draw.herokuapp.com/']
+  # config.web_socket_server_url = "wss://action-cable-example.herokuapp.com/cable"
+  # config.action_cable.allowed_request_origins = ['https://chat-n-draw.herokuapp.com/', 'http://chat-n-draw.herokuapp.com/']
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
