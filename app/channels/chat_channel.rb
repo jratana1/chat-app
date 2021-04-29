@@ -12,9 +12,16 @@ class ChatChannel < ApplicationCable::Channel
       )
     end
 
-    def draw(opts)
-      
+    def draw(opts) 
       ActionCable.server.broadcast('chat_channel', { cell: opts.fetch("cell"), action: "draw" })
+    end
+
+    def answer(opts)
+      Answer.create(
+        answer: opts.fetch('content')
+      )
+      # ActionCable.server.broadcast('chat_channel', { answer: opts.fetch("answer"), action: "answer" })
+
     end
 
   end
